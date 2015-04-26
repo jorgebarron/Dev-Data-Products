@@ -1,0 +1,16 @@
+{
+    "contents" : "# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyUI(fluidPage(\n\n  # Application title\n  titlePanel(\"European Option Price Calculator\"),\n\n  # Sidebar with a slider input for number of bins\n  sidebarLayout(\n    sidebarPanel(\n          radioButtons(\"type\", \"Option Type: \",\n                             c(\"Call\" = \"1\",\n                               \"Put\" = \"2\")),\n\n          numericInput('stock', 'Spot price of the underlying asset: ', value = 1),\n          numericInput('strike', 'Strike price of the underlying asset: ', value = 1),\n          numericInput('time', 'Time to maturity in years: ', value = 1),\n          numericInput('risk_free_rate', 'Risk-Free Interest Rate (in decimal format): ', value = 1),\n          numericInput('sigma', 'Volatility (in decimal format): ', value = 1),\n          \n          actionButton(\"goButton\", \"Calculate\")\n    ),\n\n    mainPanel(\n          h3('European option (Black Scholes calculator)'),\n          h1(' '),\n          h1('__________ '),h1(' '),h1(' '),\n          textOutput('var2'),\n          h2(' '),\n          h2(' '),\n          h2(' '),\n          h2(' '),\n          textOutput('var')\n      )\n  )\n))\n",
+    "created" : 1429870347488.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "897090539",
+    "id" : "2BD18EDE",
+    "lastKnownWriteTime" : 1429963819,
+    "path" : "C:/Users/Jorge - work/github-repos/Dev Data Products/project1/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

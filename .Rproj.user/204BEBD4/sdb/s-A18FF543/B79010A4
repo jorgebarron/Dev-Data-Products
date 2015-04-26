@@ -1,0 +1,16 @@
+{
+    "contents" : "---\ntitle       : European Option Price Calculator\nsubtitle    : Black Scholes calculator\nauthor      : http://exploringpythonforquantanalysis.blogspot.co.uk/\njob         : 25 April 2015\nframework   : io2012        # {io2012, html5slides, shower, dzslides, ...}\nhighlighter : highlight.js  # {highlight.js, prettify, highlight}\nhitheme     : tomorrow      # \nwidgets     : []            # {mathjax, quiz, bootstrap}\nmode        : selfcontained # {standalone, draft}\nknit        : slidify::knit2slides\n---\n\n## Introduction\nThis presentation is part of a project for the course Developing Data Products offered by Johns Hopkins Bloomberg School of Public Health via Coursera.\n\nThe shiny application developed will calculate the price of a European Option (Call or Put) based on parameters input by the user.\n\n---\n\n## Definitions\nOption is a financial derivative that represents a contract sold by one party (option writer) to another party (option holder). The contract offers the buyer the right, but not the obligation, to buy (call) or sell (put) a security or other financial asset at an agreed-upon price (the strike price) during a certain period of time or on a specific date (exercise date).\n\n'European Option' is an option that can only be exercised at the end of its life, at its maturity.\n\nsource: http://www.investopedia.com/\n\n--- .class #id \n\n## Input\n\n\n\n- Option Type: User can select between Call and Put options\n\n- Spot price of the underlying asset \n\n- Strike price of the underlying asset \n\n- Time to maturity in years\n\n- Risk-Free Interest Rate (in decimal format)\n\n- Volatility of the underlying asset (in decimal format)\n\n---\n## Output\n\nThe app will perfrom the below calculations and return the results:\n\n\n\n<img height='325' src = './assets/img/download.png'></img>\n\n---\n## Links\n\nYou can find the code for the application in github:\n\n\n\n\n",
+    "created" : 1429981410293.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3324742289",
+    "id" : "B79010A4",
+    "lastKnownWriteTime" : 1430061365,
+    "path" : "C:/Users/Jorge - work/github-repos/Dev Data Products/project1/Option Calculator/index.Rmd",
+    "project_path" : "Option Calculator/index.Rmd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

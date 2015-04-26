@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyServer(\n      function(input, output) {\n            \n            \n            \n                                        \n                                        \n                                       \n            output$var <- renderText({\n                  input$goButton\n                  stock <- isolate(as.numeric(input$stock))\n                  strike <- isolate(as.numeric(input$strike))\n                  time <- isolate(as.numeric(input$time))\n                  risk_free_rate <- isolate(as.numeric(input$risk_free_rate))\n                  sigma <- isolate(as.numeric(input$sigma))\n                  d1 <-  ((log(stock/strike) + (risk_free_rate + 0.5 * sigma*sigma) *\n                                           time) / (sigma * sqrt(time) ))\n                  d2 <- ( d1 - sigma * sqrt(time ))\n                  call_price =  ( stock * pnorm(d1) - strike * exp(-risk_free_rate*time)  * pnorm(d2) )\n                  put_price =  ( -stock * pnorm(-d1) + strike * exp(-risk_free_rate*time)  * pnorm(-d2) )\n                  if (isolate(as.numeric(input$type)) == 1) {\n                       # isolate(paste(call_price)) \n                        isolate(paste( call_price)) }\n                  else {\n                        isolate(paste(put_price)) }\n            })\n            \n            output$var2 <- renderText({ \n                        input$goButton\n                        if (isolate(as.numeric(input$type)) == 1) {\n                              isolate(paste('Price of a European Option Call: ')) }\n                        else {\n                              isolate(paste('Price of a European Option Put: ')) }\n            \n            })\n            \n  }\n)\n",
+    "created" : 1429870347625.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3207877491",
+    "id" : "B6CC6090",
+    "lastKnownWriteTime" : 1429962456,
+    "path" : "C:/Users/Jorge - work/github-repos/Dev Data Products/project1/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
