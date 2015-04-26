@@ -50,13 +50,13 @@ The app will perfrom the below calculations and return the results:
 
 
 
-<img height='325' src = './assets/img/download.png'></img>
+<img height='300' src = './assets/img/download.png'></img>
 
----
+
 ## Links
 
 You can find the code for the application in github:
 
-
+https://github.com/jorgebarron/Dev-Data-Products
 
 
